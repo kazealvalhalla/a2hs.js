@@ -81,10 +81,20 @@ var AddToHomeScreen = function(settings = {}) {
         font-family: ${fontFamily};
         font-size: ${fontSize};
         color: ${color};
+        margin-right: 30px;
+      }
+      .a2hs__x {
+        position: absolute;
+        right: 15px;
+      }
+      .a2hs__x i {
+        color: #6fcc41!important;
+        font-size: 20px;
       }`;
     // Create message
     div.innerHTML = `<div class="a2hs__logo">${logoImage}</div>
-      <div class="a2hs__text">${htmlContent}</div>`;
+      <div class="a2hs__text">${htmlContent}</div>
+      <div class="a2hs__x"><i class="fas fa-times"></i></div>`;
     // Add class to container
     div.setAttribute("class", "a2hs__container");
     // Add onClick function
