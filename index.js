@@ -100,8 +100,10 @@ var AddToHomeScreen = function(settings = {}) {
     // Add onClick function
     div.onclick = function(event) {
       console.log(event)
-      // Prevent default click
-      event.preventDefault();
+      console.log(event.target.tagName != "A")
+      // Prevent default click if not link
+      if(event.target.tagName != "A")
+        event.preventDefault();
       // Hide a2hs_message
       window.localStorage.setItem("a2hs_message", "hide");
       // Remove a2hs container from DOM
