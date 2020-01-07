@@ -99,6 +99,7 @@ var AddToHomeScreen = function(settings = {}) {
     div.setAttribute("class", "a2hs__container");
     // Add onClick function
     div.onclick = function(event) {
+      console.log(event)
       // Prevent default click
       event.preventDefault();
       // Hide a2hs_message
