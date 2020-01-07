@@ -99,8 +99,6 @@ var AddToHomeScreen = function(settings = {}) {
     div.setAttribute("class", "a2hs__container");
     // Add onClick function
     div.onclick = function(event) {
-      console.log(event)
-      console.log(event.target.tagName != "A")
       // Prevent default click if not link
       if(event.target.tagName != "A")
         event.preventDefault();
