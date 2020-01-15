@@ -126,6 +126,7 @@ var AddToHomeScreen = function(settings = {}) {
     // Render elements
     document.head.appendChild(style);
     document.body.appendChild(div);
+    console.log("REENDER MEEE")
   }
 };
 
