@@ -46,7 +46,7 @@ var AddToHomeScreen = function(settings = {}) {
       </svg>`;
   var htmlContent =
     settings.htmlContent ||
-    `Install <strong>${brandName} web app</strong> on your iOS device: tap share and <strong>Add to Home Screen</strong> ↓<br><a href="/add-to-home-screen">Click here</a> for tutorial`;
+    `Install <strong>${brandName} web app</strong> on your iOS device: tap share and <strong>TEST Add to Home Screen</strong> ↓<br><a href="/add-to-home-screen">Click here</a> for tutorial`;
   // Define iOS User-Agent variable
   var iOS = /iphone|ipad|ipod/.test(window.navigator.userAgent.toLowerCase());
   // Define standalone mode variable
@@ -126,7 +126,6 @@ var AddToHomeScreen = function(settings = {}) {
     // Render elements
     document.head.appendChild(style);
     document.body.appendChild(div);
-    console.log("REENDER MEEE")
   }
 };
 
