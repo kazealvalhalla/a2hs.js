@@ -46,7 +46,7 @@ var AddToHomeScreen = function(settings = {}) {
       </svg>`;
   var htmlContent =
     settings.htmlContent ||
-    `Install <strong>${brandName} web app</strong>TEST on your iOS device: tap share and <strong>TEST Add to Home Screen</strong> ↓<br><a href="/add-to-home-screen">Click here</a> for tutorial`;
+    `Install <strong>${brandName} web app</strong> on your iOS device: tap share and <strong> Add to Home Screen</strong> ↓<br><a href="/add-to-home-screen">Click here</a> for tutorial`;
   // Define iOS User-Agent variable
   var iOS = /iphone|ipad|ipod/.test(window.navigator.userAgent.toLowerCase());
   // Define standalone mode variable
@@ -100,25 +100,26 @@ var AddToHomeScreen = function(settings = {}) {
     // Create message
     div.innerHTML = `<div class="a2hs__logo">${logoImage}</div>
       <div class="a2hs__text">${htmlContent}</div>
-      <div class="a2hs__x"><i class="fas fa-times"></i>TEST</div>`;
+      <div class="a2hs__x"><i class="fas fa-times"></i></div>`;
     // Add class to container
     div.setAttribute("class", "a2hs__container");
     // Add onClick function
     div.onclick = function(event) {
-      console.log("HERE?3")
       // Prevent default click if not link
       if(event.target.tagName != "A")
         event.preventDefault();
       
       if(event.target.className == "a2hs__x") {
-        console.log("HERE?2")
         // Hide a2hs_message
         window.localStorage.setItem("a2hs_message", "hide");
         // Remove a2hs container from DOM
         document.querySelector(".a2hs__container").remove();
       } else {
+        // Hide a2hs_message
+        window.localStorage.setItem("a2hs_message", "hide");
+        // Remove a2hs container from DOM
+        document.querySelector(".a2hs__container").remove();
         window.location.href = "/add-to-home-screen";
-        console.log("HERE?")
       }
 
 
