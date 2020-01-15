@@ -46,7 +46,7 @@ var AddToHomeScreen = function(settings = {}) {
       </svg>`;
   var htmlContent =
     settings.htmlContent ||
-    `Install <strong>${brandName} web app</strong> on your iOS device: tap share and <strong>TEST Add to Home Screen</strong> ↓<br><a href="/add-to-home-screen">Click here</a> for tutorial`;
+    `Install <strong>${brandName} web app</strong>TEST on your iOS device: tap share and <strong>TEST Add to Home Screen</strong> ↓<br><a href="/add-to-home-screen">Click here</a> for tutorial`;
   // Define iOS User-Agent variable
   var iOS = /iphone|ipad|ipod/.test(window.navigator.userAgent.toLowerCase());
   // Define standalone mode variable
@@ -100,7 +100,7 @@ var AddToHomeScreen = function(settings = {}) {
     // Create message
     div.innerHTML = `<div class="a2hs__logo">${logoImage}</div>
       <div class="a2hs__text">${htmlContent}</div>
-      <div class="a2hs__x"><i class="fas fa-times"></i></div>`;
+      <div class="a2hs__x"><i class="fas fa-times"></i>TEST</div>`;
     // Add class to container
     div.setAttribute("class", "a2hs__container");
     // Add onClick function
