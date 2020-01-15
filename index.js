@@ -85,11 +85,17 @@ var AddToHomeScreen = function(settings = {}) {
       }
       .a2hs__x {
         position: absolute;
-        right: 15px;
+        right: 0;
+        height: 100%;
+        width: 20%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
       }
       .a2hs__x i {
         color: #6fcc41!important;
         font-size: 20px;
+        padding-right: 10px;
       }`;
     // Create message
     div.innerHTML = `<div class="a2hs__logo">${logoImage}</div>
@@ -102,10 +108,13 @@ var AddToHomeScreen = function(settings = {}) {
       // Prevent default click if not link
       if(event.target.tagName != "A")
         event.preventDefault();
-      // Hide a2hs_message
-      window.localStorage.setItem("a2hs_message", "hide");
-      // Remove a2hs container from DOM
-      document.querySelector(".a2hs__container").remove();
+      
+      if(event.target.className == "a2hs__x") {
+        // Hide a2hs_message
+        window.localStorage.setItem("a2hs_message", "hide");
+        // Remove a2hs container from DOM
+        document.querySelector(".a2hs__container").remove();
+      }
     };
     // Render elements
     document.head.appendChild(style);
