@@ -110,12 +110,14 @@ var AddToHomeScreen = function(settings = {}) {
         event.preventDefault();
       
       if(event.target.className == "a2hs__x") {
+        console.log("HERE?2")
         // Hide a2hs_message
         window.localStorage.setItem("a2hs_message", "hide");
         // Remove a2hs container from DOM
         document.querySelector(".a2hs__container").remove();
       } else {
         window.location.href = "/add-to-home-screen";
+        console.log("HERE?")
       }
 
 
