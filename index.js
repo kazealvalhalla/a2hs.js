@@ -95,7 +95,7 @@ var AddToHomeScreen = function(settings = {}) {
       .a2hs__x i {
         color: #6fcc41!important;
         font-size: 20px;
-        padding-right: 10px;
+        padding-right: 20px;
       }`;
     // Create message
     div.innerHTML = `<div class="a2hs__logo">${logoImage}</div>
