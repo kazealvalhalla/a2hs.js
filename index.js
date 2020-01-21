@@ -114,6 +114,7 @@ var AddToHomeScreen = function(settings = {}) {
         window.localStorage.setItem("a2hs_message", "hide");
         // Remove a2hs container from DOM
         document.querySelector(".a2hs__container").remove();
+        event.preventDefault();
       } else {
         // Hide a2hs_message
         window.localStorage.setItem("a2hs_message", "hide");
