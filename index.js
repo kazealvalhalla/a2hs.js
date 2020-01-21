@@ -106,22 +106,26 @@ var AddToHomeScreen = function(settings = {}) {
     // Add onClick function
     div.onclick = function(event) {
       // Prevent default click if not link
-      if(event.target.tagName != "A")
-        event.preventDefault();
+      //if(event.target.tagName != "A")
+      event.preventDefault();
+
+      // Hide a2hs_message
+      window.localStorage.setItem("a2hs_message", "hide");
+      // Remove a2hs container from DOM
+      document.querySelector(".a2hs__container").remove();
       
-      if(event.target.className == "a2hs__x" || event.target.className == "fas fa-times") {
-        // Hide a2hs_message
-        window.localStorage.setItem("a2hs_message", "hide");
-        // Remove a2hs container from DOM
-        document.querySelector(".a2hs__container").remove();
-        event.preventDefault();
-      } else {
-        // Hide a2hs_message
-        window.localStorage.setItem("a2hs_message", "hide");
-        // Remove a2hs container from DOM
-        document.querySelector(".a2hs__container").remove();
-        window.location.href = "/add-to-home-screen";
-      }
+      // if(event.target.className == "a2hs__x" || event.target.className == "fas fa-times") {
+      //   // Hide a2hs_message
+      //   window.localStorage.setItem("a2hs_message", "hide");
+      //   // Remove a2hs container from DOM
+      //   document.querySelector(".a2hs__container").remove();
+      // } else {
+      //   // Hide a2hs_message
+      //   window.localStorage.setItem("a2hs_message", "hide");
+      //   // Remove a2hs container from DOM
+      //   document.querySelector(".a2hs__container").remove();
+      //   window.location.href = "/add-to-home-screen";
+      // }
 
 
     };
