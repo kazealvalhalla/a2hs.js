@@ -95,7 +95,7 @@ var AddToHomeScreen = function(settings = {}) {
       .a2hs__x i {
         color: #6fcc41!important;
         font-size: 20px;
-        padding-right: 20px;
+        padding-right: 25px;
       }`;
     // Create message
     div.innerHTML = `<div class="a2hs__logo">${logoImage}</div>
@@ -109,7 +109,7 @@ var AddToHomeScreen = function(settings = {}) {
       if(event.target.tagName != "A")
         event.preventDefault();
       
-      if(event.target.className == "a2hs__x") {
+      if(event.target.className == "a2hs__x" || event.target.className == "fas fa-times") {
         // Hide a2hs_message
         window.localStorage.setItem("a2hs_message", "hide");
         // Remove a2hs container from DOM
