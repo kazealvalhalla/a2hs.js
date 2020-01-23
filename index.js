@@ -81,7 +81,7 @@ var AddToHomeScreen = function(settings = {}) {
         font-family: ${fontFamily};
         font-size: ${fontSize};
         color: ${color};
-        margin-right: 30px;
+        margin-right: 40px;
       }
       .a2hs__x {
         position: absolute;
